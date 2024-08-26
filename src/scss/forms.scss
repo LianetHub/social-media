@@ -1,0 +1,150 @@
+.form {
+	position: relative;
+	// .form__caption
+	&__caption {
+		font-weight: 700;
+		line-height: math.div(46, 40);
+		font-size: 30px;
+		@media (min-width: $md4) {
+			font-size: 40px;
+		}
+		padding: em(0) em(20, 40) em(0) em(0);
+	}
+	// .form__subtitle
+	&__subtitle {
+		margin: em(12, 16) em(0) em(0) em(0);
+		font-size: 14px;
+		@media (min-width: $md3) {
+			font-size: 16px;
+		}
+		font-weight: 300;
+		line-height: math.div(19, 16);
+	}
+	// .form__service
+	&__service {
+		margin: em(24) em(0) em(32) em(0);
+		border-top: 1px solid #afafa9;
+		border-bottom: 1px solid #afafa9;
+		padding: em(24);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .form__service-title
+	&__service-title {
+	}
+	// .form__service-price
+	&__service-price {
+	}
+	// .form__fields
+	&__fields {
+		display: flex;
+		flex-direction: column;
+		margin-top: rem(20);
+		gap: rem(20);
+		@media (min-width:$md3) {
+			margin-top: rem(40);
+			gap: rem(40);
+		
+		}
+
+	}
+	// .form__input
+	&__input {
+		background: rgba(228, 252, 113, 0.05);
+		border: 1px solid rgba($color: #111, $alpha: 0.5);
+		border-radius: 4px;
+		width: 100%;
+		padding: em(24, 24);
+		font-size: 18px;
+		@media (min-width: $md4) {
+			font-size: 24px;
+		}
+		line-height: math.div(28, 24);
+		transition: border-color 0.3s ease 0s;
+		&:focus {
+			border-color: #111;
+		}
+	}
+	// .form__textarea
+	&__textarea {
+		background: rgba(228, 252, 113, 0.05);
+		border: 1px solid rgba($color: #111, $alpha: 0.5);
+		border-radius: 4px;
+		width: 100%;
+		height: rem(150);
+		resize: none;
+		padding: em(24, 24);
+		font-size: 18px;
+		@media (min-width: $md4) {
+			font-size: 24px;
+		}
+		line-height: math.div(28, 24);
+		transition: border-color 0.3s ease 0s;
+		&:focus {
+			border-color: #111;
+		}
+	}
+	// .form__btn
+	&__btn {
+		margin: em(40, 24) em(0) em(0) em(0);
+		width: 100%;
+		background: #e4fc71;
+		box-shadow: 0px 5px 0px -2px #111111;
+		border-radius: 4px;
+		padding: em(24, 24);
+		font-size: 18px;
+		@media (min-width: $md4) {
+			font-size: 24px;
+		}
+		line-height: math.div(28, 24);
+		text-align: center;
+	}
+}
+
+.btn {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	transition: all 0.3s ease 0s;
+	user-select: none;
+	white-space: nowrap;
+	text-align: center;
+	line-height: normal;
+	@media (min-width: $md5) {
+		font-size: 18px;
+	}
+	@media (min-width: $md3) {
+		font-size: 20px;
+	}
+	@media (min-width: $md1) {
+		font-size: 24px;
+	}
+	padding: em(24, 24) em(35, 24);
+	border-radius: 4px;
+	&::before {
+		order: 1;
+		font-size: 1.45em;
+	}
+	&.btn-primary {
+		background: #e4fc71;
+		color: #111;
+		box-shadow: 0px 5px 0px -2px #111;
+		@media (any-hover: hover) {
+			&:hover {
+				background: darken($color: #e4fc71, $amount: 10);
+			}
+		}
+	}
+
+	&:disabled,
+	&[aria-disabled="true"] {
+		cursor: default;
+		color: #fff;
+		background: #dfe0e1;
+		pointer-events: none;
+	}
+}

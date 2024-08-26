@@ -1,0 +1,242 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #e4fc71;
+	&.scroll {
+		color: #111111;
+		.header__wrapper {
+			.header__logo-top {
+				fill: #111111;
+			}
+			.icon-menu {
+				color: #111111;
+			}
+		}
+	}
+	&__wrapper {
+		padding: em(20) em(0) em(0) em(0);
+	
+		@media (min-width: $md0) {
+			padding: em(80) em(0) em(0) em(0);
+		}
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+	}
+	// .header__container
+	&__container {
+		max-width: 1320px;
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 11;
+		margin-right: rem(35);
+		max-width: 27%;
+		@media (min-width: $md5) {
+			max-width: 104px;
+		}
+		& svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #282828;
+		transition: transform 0.3s ease 0s;
+		transform: translateX(100%);
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: 10;
+		&.active {
+			transform: translateX(0);
+		}
+		padding: rem(128) rem(12);
+		@media (min-width: 629.98px) {
+			position: static;
+			flex: 1 1 auto;
+			top: auto;
+			left: auto;
+			width: auto;
+			height: auto;
+			padding: 0;
+			background: none;
+			transition: none;
+			transform: none;
+			overflow-x: visible;
+			overflow-y: visible;
+			margin-left: auto;
+			max-width: 55%;
+			text-align: right;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		@media (min-width: $md3) {
+			margin-left: 0;
+			max-width: 100%;
+			text-align: left;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	// .header__menu
+	&__menu {
+		@media (min-width: $md3) {
+			padding-right: rem(170);
+		}
+	}
+	// .header__menu-list
+	&__menu-list {
+		@extend .contacts;
+		flex-direction: column;
+		border-top: 1px solid rgba(175, 175, 169, 0.3);
+		@media (min-width: 629.98px) {
+			border-top: 0;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+		@media (min-width: $md3) {
+			justify-content: flex-start;
+		}
+	}
+	// .header__menu-item
+	&__menu-item {
+		@media (min-width: 629.98px) {
+			&:not(:last-child) {
+				margin: em(0) em(7) em(0) em(0);
+				&::after {
+					margin: em(0) em(0) em(0) em(7);
+					content: "/";
+				}
+			}
+		}
+	}
+	// .header__menu-link
+	&__menu-link {
+		@extend .contacts__item-link;
+
+		@media (max-width: 630px) {
+			text-align: center;
+			font-size: 2rem;
+			width: 100%;
+			display: block;
+			padding: 1rem 0;
+			font-weight: 700;
+			border-bottom: 1px solid rgba(175, 175, 169, 0.3);
+		}
+	}
+	// .header__logo-top
+	&__logo-top {
+		fill: #faf9f6;
+	}
+	// .header__contacts
+	&__contacts {
+		margin-top: 2.5rem;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.1875rem;
+		@media (min-width: 629.98px) {
+			font-size: rem(14);
+			margin-top: 0;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			flex-direction: row;
+		}
+		@media (min-width: $md3) {
+			margin-left: auto;
+			padding-left: rem(170);
+		}
+		.contacts__item {
+			&:not(:last-child) {
+				margin: 0 0 1rem 0;
+				&::after {
+					display: none;
+				}
+				@media (min-width: 629.98px) {
+					margin: em(0) em(4) em(0) em(0);
+					&::after {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+	// .header__contact
+	&__contact {
+	}
+	// .header__contact-link
+	&__contact-link {
+	}
+}
+
+.icon-menu {
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0;
+	order: 1;
+	min-width: rem(41);
+	height: rem(41);
+	z-index: 11;
+	color: #fff;
+	margin: em(0) em(0) em(0) auto;
+	@media (min-width: 629.98px) {
+		display: none;
+	}
+	& span {
+		display: block;
+		padding: rem(3) rem(4);
+		transition: transform 0.4s ease 0.4s, opacity 0.4s ease 0.4s;
+		will-change: transform;
+		&::before {
+			content: "";
+			display: block;
+			height: rem(2);
+			width: rem(24);
+			background: currentColor;
+			transition: transform 0.3s ease 0s;
+			will-change: transform;
+		}
+	}
+	&.active {
+		color: #fff;
+		& span {
+			transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+			&::before {
+				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
+			}
+			&:first-child {
+				transform: translateY(rem(8));
+				&::before {
+					transform: rotate(-135deg);
+				}
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(rem(-8));
+				&::before {
+					transform: rotate(-225deg);
+				}
+			}
+		}
+	}
+}

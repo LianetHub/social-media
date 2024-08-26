@@ -1,0 +1,250 @@
+//============ МОДУЛИ ====================
+// @import "modules/navigation";
+// @import "modules/pagination";
+// @import "modules/select";
+@import "modules/popup";
+// @import "modules/range-slider";
+// @import "modules/cookie";
+//============ МОДУЛИ ====================
+.contacts {
+	display: flex;
+	font-weight: 300;
+	font-size: 14px;
+	@media (min-width: $md5) {
+		font-size: 16px;
+	}
+	line-height: math.div(19, 16);
+	// .contacts__item
+	&__item {
+		&:not(:last-child) {
+			margin: em(0) em(4) em(0) em(0);
+			&::after {
+				margin: em(0) em(0) em(0) em(4);
+				content: "/";
+			}
+		}
+	}
+	// .contacts__item-link
+	&__item-link {
+		// transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				// color: #ef8bf8;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.blogger-caption {
+	display: flex;
+	align-items: center;
+	// .blogger-caption__thumb
+	&__thumb {
+		border: 1px solid #ef8bf8;
+		border-radius: 50%;
+		width: 78px;
+		height: 78px;
+		margin: em(0) em(10) em(0) em(0);
+		@media (min-width: $md5) {
+			width: 92px;
+			height: 92px;
+			margin: em(0) em(20) em(0) em(0);
+		}
+		padding: em(5);
+		flex-shrink: 0;
+	}
+	// .blogger-caption__title
+	&__title {
+		margin: em(6) em(0) em(0) em(0);
+		font-weight: 300;
+		line-height: math.div(19, 16);
+		font-size: 14px;
+		@media (min-width: $md5) {
+			font-size: 16px;
+		}
+	}
+	// .blogger-caption__nick
+	&__nick {
+		font-size: 18px;
+		@media (min-width: $md5) {
+			font-size: 24px;
+		}
+		line-height: math.div(28, 24);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ef8bf8;
+			}
+		}
+	}
+}
+
+.spec-list {
+	border-bottom: 1px solid rgba(175, 175, 169, 0.3);
+	// .spec-list__row
+	&__row {
+		display: flex;
+		align-items: center;
+		padding: em(10) em(24) em(19);
+		border-top: 1px solid rgba(175, 175, 169, 0.3);
+	}
+	// .spec-list__stat
+	&__stat {
+		padding: em(10) em(0) em(0) em(0);
+		@media (min-width: $md5) {
+			font-size: 18px;
+		}
+		line-height: math.div(21, 18);
+		flex: 0 0 55%;
+	}
+	// .spec-list__value
+	&__value {
+		font-size: 30px;
+		@media (min-width: $md5) {
+			font-size: 40px;
+		}
+		line-height: math.div(47, 40);
+		&._precent {
+			&::after {
+				content: "%";
+				display: inline-block;
+				margin: em(0) em(0) em(0) em(3);
+				padding: em(3) em(0) em(0) em(0);
+				font-size: em(16, 40);
+				font-weight: 300;
+				vertical-align: top;
+			}
+		}
+		&._rub {
+			&::after {
+				content: "₽";
+				display: inline-block;
+				margin: em(0) em(0) em(0) em(3);
+				padding: em(3) em(0) em(0) em(0);
+				font-size: em(16, 40);
+				font-weight: 300;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.title {
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 40px;
+	@media (min-width: $md5) {
+		font-size: 60px;
+	}
+	@media (min-width: $md4) {
+		font-size: 80px;
+	}
+	font-weight: 700;
+	line-height: math.div(93, 80);
+	& span {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: em(24, 80);
+		line-height: math.div(28, 24);
+		&::before {
+			content: "";
+			position: absolute;
+			top: -15%;
+			left: -5px;
+			width: calc(100% + 6px);
+			height: calc(100% + 4px);
+			background: #e4fc71;
+			border-radius: 2px;
+			transform: rotate(-0.51deg);
+			z-index: -1;
+		}
+	}
+}
+.price {
+	position: relative;
+	z-index: 1;
+	font-size: 24px;
+	line-height: math.div(28, 24);
+	&::before {
+		content: "";
+		position: absolute;
+		top: -15%;
+		left: -5px;
+		width: calc(100% + 6px);
+		height: calc(100% + 4px);
+		background: #e4fc71;
+		border-radius: 2px;
+		transform: rotate(-0.51deg);
+		z-index: -1;
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// Стилизация селекта
+// $selectBg: $orange;
+// $selectColor: $mainColor;
+
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+// ::selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	-webkit-box-shadow: none;
+// 	box-shadow: none;
+// }
+// ::-moz-selection {
+// 	color: $selectColor;
+// 	background-color: $selectBg;
+// 	box-shadow: none;
+// }
+
+// Стилизация скролла
+
+$scrollbarColor: #e4fc71;
+$scrollbarHover: darken(
+	$color: #e4fc71,
+	$amount: 10,
+);
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: $scrollbarColor;
+	border-radius: 8px;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $scrollbarHover;
+		}
+	}
+}
+
+//============ ОБЩИЕ ЭЛЕМЕНТЫ ============
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
+.hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======

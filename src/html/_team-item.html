@@ -1,0 +1,31 @@
+<div class="team__item">
+    <ul class="team__item-labels">
+        @@for (var i = 0; i < items.length; i++) { @@include('../html/_label.html', `+(JSON.stringify(items[i]))+`) } </ul>
+            <div class="team__item-header blogger-caption">
+                <div class="blogger-caption__thumb">
+                    <img src="@img/thumbs/@@thumb.png" class="cover-image" alt="@@name" />
+                </div>
+                <div class="blogger-caption__info">
+                    <div class="blogger-caption__title">Проверенный блогер</div>
+                    <a href="" class="blogger-caption__nick"> @@nick </a>
+                </div>
+            </div>
+            <ul class="team__item-list spec-list">
+                <li class="spec-list__row">
+                    <div class="spec-list__stat">ER</div>
+                    <div class="spec-list__value _precent">@@er</div>
+                </li>
+                <li class="spec-list__row">
+                    <div class="spec-list__stat">Followers</div>
+                    <div class="spec-list__value">@@followers</div>
+                </li>
+                <li class="spec-list__row">
+                    <div class="spec-list__stat">Reach in stories</div>
+                    <div class="spec-list__value">@@reach</div>
+                </li>
+            </ul>
+            <div class="team__item-footer">
+                <div class="team__item-price price">от @@price ₽</div>
+                <a href="#modal-blogger" data-modal class="team__item-more"><span>Подробнее</span></a>
+            </div>
+</div>

@@ -1,0 +1,81 @@
+[
+    {
+        "thumb": "01",
+        "nick": "ivane_k",
+        "er": "3.21",
+        "followers": "3 041",
+        "reach": "9 972",
+        "price": "3 000",
+        "labels": true,
+        "items": [
+            {
+                "image": "@img/emoji/03.png",
+                "title": "Путешествия",
+                "color": "blue"
+            }
+        ]
+    },
+    {
+        "thumb": "02",
+        "nick": "diana_mokshina",
+        "er": "5.04",
+        "followers": "98 094",
+        "reach": "85 874",
+        "price": "6 000",
+        "labels": true,
+        "items": [
+            {
+                "image": "@img/emoji/03.png",
+                "title": "Путешествия",
+                "color": "blue"
+            },
+            {
+                "image": "@img/emoji/02.png",
+                "title": "Психология",
+                "color": "pink"
+            },
+            {
+                "image": "@img/emoji/01.png",
+                "title": "Лайфст..",
+                "color": "gray"
+            }
+        ]
+    },
+    {
+        "thumb": "03",
+        "nick": "margo_robins",
+        "er": "2.84",
+        "followers": "9 741",
+        "reach": "10 972",
+        "price": "9 000",
+        "labels": true,
+        "items": [
+            {
+                "image": "@img/emoji/03.png",
+                "title": "Путешествия",
+                "color": "blue"
+            }
+        ]
+    },
+    {
+        "thumb": "04",
+        "nick": "duo_black_99",
+        "er": "5.64",
+        "followers": "975 097",
+        "reach": "981 095",
+        "price": "1 900",
+        "labels": true,
+        "items": [
+            {
+                "image": "@img/emoji/09.png",
+                "title": "WB эксперт",
+                "color": "brown"
+            },
+            {
+                "image": "@img/emoji/03.png",
+                "title": "Путешествия",
+                "color": "blue"
+            }
+        ]
+    }
+]
