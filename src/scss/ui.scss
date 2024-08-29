@@ -135,6 +135,7 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 40px;
+	gap: 0.875rem;
 	@media (min-width: $md5) {
 		font-size: 60px;
 	}
@@ -143,13 +144,19 @@
 	}
 	font-weight: 700;
 	line-height: math.div(93, 80);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	& span {
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		// position: absolute;
+		// top: 45%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
+		position: relative;
 		font-size: em(24, 80);
 		line-height: math.div(28, 24);
+		padding: 0 em(60, 24);
+		text-transform: none;
 		&::before {
 			content: "";
 			position: absolute;

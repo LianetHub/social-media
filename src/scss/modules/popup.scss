@@ -11,7 +11,30 @@
 	visibility: hidden;
 	display: flex;
 	transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s;
-
+	.examples {
+		position: relative;
+		z-index: 1;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			opacity: 0.52;
+			width: 1395px;
+			height: 1395px;
+			background: linear-gradient(143deg, #9b9af7 8.37%, rgba(155, 154, 247, 0) 91.49%);
+			filter: blur(100px);
+			pointer-events: none;
+			z-index: -1;
+		}
+		background: #faf9f6;
+		color: #282828;
+		.examples__title {
+			color: #282828;
+		}
+	}
 	&.open {
 		opacity: 1;
 		visibility: visible;
@@ -331,37 +354,21 @@
 }
 
 .examples {
-	background: #faf9f6;
-	color: #282828;
 	padding: em(60) em(0) em(32) em(0);
 	line-height: normal;
 	@media (min-width: $md4) {
 		padding: em(60) em(0) em(64) em(0);
 	}
-	position: relative;
-	z-index: 1;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		border-radius: 50%;
-		opacity: 0.52;
-		width: 1395px;
-		height: 1395px;
-		background: linear-gradient(143deg, #9b9af7 8.37%, rgba(155, 154, 247, 0) 91.49%);
-		filter: blur(100px);
-		pointer-events: none;
-		z-index: -1;
-	}
+
 	// .examples__container
 	&__container {
 	}
 	// .examples__title
 	&__title {
+		color: #faf9f6;
 		&.title {
 			& span {
+				color: #111;
 				&::before {
 					background: #ef8bf8;
 				}
@@ -433,6 +440,57 @@
 	// .examples__desc
 	&__desc {
 		margin-top: rem(12);
+		font-size: 16px;
+		font-weight: 300;
+	}
+	// .examples__person
+	&__person {
+		margin-top: 12px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		@media (any-hover: hover) {
+			&:hover {
+				.examples__person-name {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	// .examples__person-thumb
+	&__person-thumb {
+		border: 1px solid #ef8bf8;
+		border-radius: 50%;
+		flex-shrink: 0;
+		padding: 4px;
+		width: 59px;
+		height: 59px;
+		flex-shrink: 0;
+		& img {
+			border-radius: 50%;
+		}
+	}
+	// .examples__person-column
+	&__person-column {
+		display: flex;
+		flex-direction: column;
+	}
+	// .examples__person-name
+	&__person-name {
+		color: #e4fc71;
+		font-size: 18px;
+		@media (min-width: $md4) {
+			font-size: 21px;
+		}
+		@media (min-width: $md2) {
+			font-size: 24px;
+		}
+		text-decoration-line: underline;
+	}
+	// .examples__desc
+	&__desc {
+		margin-top: 12px;
+		color: #faf9f6;
 		font-size: 16px;
 		font-weight: 300;
 	}
