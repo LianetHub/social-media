@@ -1507,8 +1507,8 @@ body.lock-menu {
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, transform 0.3s ease 0s;
   transition: opacity 0.3s ease 0s, visibility 0.3s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   padding: 24px;
-  -webkit-filter: drop-shadow(0px -1px 0px #ef8bf8) drop-shadow(0px 1px 0px #ef8bf8);
-          filter: drop-shadow(0px -1px 0px #ef8bf8) drop-shadow(0px 1px 0px #ef8bf8);
+  border-bottom: 1px solid #ef8bf8;
+  border-top: 1px solid #ef8bf8;
   background: #111;
   z-index: 2;
 }
@@ -1522,6 +1522,8 @@ body.lock-menu {
   border-style: solid;
   border-width: 0 35.5px 16px 35.5px;
   border-color: transparent transparent #111 transparent;
+  -webkit-filter: drop-shadow(0px -1px 0px #ef8bf8);
+          filter: drop-shadow(0px -1px 0px #ef8bf8);
 }
 
 .about__body {
@@ -2914,7 +2916,7 @@ body.lock-menu {
   }
 
   .no-webp .case__step:nth-child(2){
-    background: url("../img/cases/case-decor.png") 0 40px/95% auto no-repeat; }
+    background: url("../img/cases/case-decor.png") 0 40px/95% auto no-repeat, url("../img/cases/case-decor-2.png") 0 calc(100% + 20px)/95% auto no-repeat; }
 
   .case__step:nth-child(2) {
     -webkit-box-flex: 0;
@@ -3689,5 +3691,5 @@ body.lock-menu {
 
 @media (min-width: 767.98px){
 
-  .webp .case__step:nth-child(2){ background: url(../img/cases/case-decor.webp) 0 40px/95% auto no-repeat; }
+  .webp .case__step:nth-child(2){ background: url(../img/cases/case-decor.webp) 0 40px/95% auto no-repeat, url(../img/cases/case-decor-2.webp) 0 calc(100% + 20px)/95% auto no-repeat; }
 }

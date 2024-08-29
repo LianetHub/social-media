@@ -214,7 +214,6 @@
 	&__step {
 		position: relative;
 		z-index: 1;
-
 		display: flex;
 		flex-direction: column;
 		counter-increment: num;
@@ -267,7 +266,7 @@
 		&:nth-child(2) {
 			@media (min-width: $md4) {
 				flex: 0 0 rem(380);
-				background: url("@img/cases/case-decor.png") 0 40px / 95% auto no-repeat;
+				background: url("@img/cases/case-decor.png") 0 40px / 95% auto no-repeat, url("@img/cases/case-decor-2.png") 0 calc(100% + 20px) / 95% auto no-repeat;
 				&::after {
 					content: "";
 					position: absolute;
