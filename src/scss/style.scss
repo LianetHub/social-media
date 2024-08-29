@@ -420,7 +420,7 @@ body {
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
-		cursor: help;
+		cursor: pointer;
 		backdrop-filter: blur(48px);
 		-webkit-backdrop-filter: blur(48px);
 		transition: border-color 0.3s ease 0s;
